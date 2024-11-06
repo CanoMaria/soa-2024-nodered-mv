@@ -1,0 +1,12 @@
+{
+    "name": "soa-2024-nodered-mv",
+    "description": "Node red de la mv para final de soa",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows-mv.json",
+            "credentialsFile": "flows-mv_cred.json"
+        }
+    }
+}

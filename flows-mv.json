@@ -1,0 +1,341 @@
+[
+    {
+        "id": "b756894d0585aa11",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "37605e0b888c71ab",
+        "type": "tab",
+        "label": "Flujo 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fe7b34da155a7705",
+        "type": "inject",
+        "z": "b756894d0585aa11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hola desde flow 1",
+        "payloadType": "str",
+        "x": 450,
+        "y": 160,
+        "wires": [
+            [
+                "fb61179c233ef63a"
+            ]
+        ],
+        "info": "Pruueba de inject\n"
+    },
+    {
+        "id": "066d5dfc9d7d2aef",
+        "type": "debug",
+        "z": "b756894d0585aa11",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "fb61179c233ef63a",
+        "type": "delay",
+        "z": "b756894d0585aa11",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 160,
+        "wires": [
+            [
+                "066d5dfc9d7d2aef",
+                "1d05ee910afed6b6"
+            ]
+        ]
+    },
+    {
+        "id": "1d05ee910afed6b6",
+        "type": "link out",
+        "z": "b756894d0585aa11",
+        "name": "Salida Flow 1 a 2",
+        "mode": "link",
+        "links": [
+            "0678fca5771f36c4"
+        ],
+        "x": 815,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "7d2012de3d68c1fd",
+        "type": "status",
+        "z": "b756894d0585aa11",
+        "name": "",
+        "scope": [
+            "fb61179c233ef63a"
+        ],
+        "x": 420,
+        "y": 320,
+        "wires": [
+            [
+                "a9e47001e6ffab91"
+            ]
+        ]
+    },
+    {
+        "id": "a9e47001e6ffab91",
+        "type": "debug",
+        "z": "b756894d0585aa11",
+        "name": "resultado status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "0678fca5771f36c4",
+        "type": "link in",
+        "z": "37605e0b888c71ab",
+        "name": "link in 1",
+        "links": [
+            "1d05ee910afed6b6"
+        ],
+        "x": 305,
+        "y": 140,
+        "wires": [
+            [
+                "8e0c66245a9b3524"
+            ]
+        ]
+    },
+    {
+        "id": "8e0c66245a9b3524",
+        "type": "debug",
+        "z": "37605e0b888c71ab",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e86beedd5d30d52b",
+        "type": "inject",
+        "z": "37605e0b888c71ab",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "37e28a72ca823620"
+            ]
+        ]
+    },
+    {
+        "id": "37e28a72ca823620",
+        "type": "exec",
+        "z": "37605e0b888c71ab",
+        "command": "ps -A",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "0575a23f75ec9dd1",
+                "ddcfa57875c21695"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0575a23f75ec9dd1",
+        "type": "debug",
+        "z": "37605e0b888c71ab",
+        "name": "resultado de ps-a",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ddcfa57875c21695",
+        "type": "split",
+        "z": "37605e0b888c71ab",
+        "name": "separar por lineas",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 570,
+        "y": 340,
+        "wires": [
+            [
+                "06f03b9091cb25a7",
+                "68a7c6f4a80c396a"
+            ]
+        ]
+    },
+    {
+        "id": "06f03b9091cb25a7",
+        "type": "debug",
+        "z": "37605e0b888c71ab",
+        "name": "Resultado del split",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "68a7c6f4a80c396a",
+        "type": "function",
+        "z": "37605e0b888c71ab",
+        "name": "function 1",
+        "func": "var mensajesProcesados = flow.get(\"mensajesProcesados\");\nvar mensajesDescartados = flow.get(\"mensajesDescartados\");\n\nif (!mensajesProcesados)\n    mensajesProcesados = 0;\nif (!mensajesDescartados)\n    mensajesDescartados = 0;\n\n// Obtengo los valores de la línea\nvar linea = msg.payload.trim();\n\n// Reseteo la variable payload\nmsg.payload = false;\n\nif (linea !== \"\") {\n    mensajesProcesados++;\n    var palabra = linea.split(\" \");\n    msg.payload = palabra;\n\n    if (palabra[0] != \"PID\") {\n        msg.payload = {\n            \"pid\": palabra[0],\n            \"processName\": palabra[4]\n        };\n    } else {\n        mensajesDescartados++;\n    }\n}\nflow.set(\"mensajesProcesados\", mensajesProcesados);\nflow.set(\"mensajesDescartados\", mensajesDescartados);\nglobal.set(\"totalMensajes\", mensajesProcesados + mensajesDescartados);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 340,
+        "wires": [
+            [
+                "4143424cf29dcd57"
+            ]
+        ]
+    },
+    {
+        "id": "4143424cf29dcd57",
+        "type": "switch",
+        "z": "37605e0b888c71ab",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 950,
+        "y": 340,
+        "wires": [
+            [],
+            [
+                "cb723cb701ceb27d"
+            ]
+        ]
+    },
+    {
+        "id": "cb723cb701ceb27d",
+        "type": "debug",
+        "z": "37605e0b888c71ab",
+        "name": "Muestra Datos",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 380,
+        "wires": []
+    }
+]
