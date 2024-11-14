@@ -16,6 +16,61 @@
         "env": []
     },
     {
+        "id": "cb82d2c944ac888e",
+        "type": "tab",
+        "label": "Flujo 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "945bc84ee7d3cf52",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "793550c9ed1fea18",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "docker-mysql",
+        "port": "3306",
+        "db": "test",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "26d7bb5c2899b8b4",
+        "type": "websocket-listener",
+        "path": "/habitacion",
+        "wholemsg": "false"
+    },
+    {
         "id": "fe7b34da155a7705",
         "type": "inject",
         "z": "b756894d0585aa11",
@@ -336,6 +391,356 @@
         "statusType": "auto",
         "x": 1140,
         "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9749ef6db3fb1dc1",
+        "type": "inject",
+        "z": "cb82d2c944ac888e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "4737f4ea35f59ea8"
+            ]
+        ]
+    },
+    {
+        "id": "fdad93f322f49dcc",
+        "type": "mqtt out",
+        "z": "cb82d2c944ac888e",
+        "name": "",
+        "topic": "casa/habitacion",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "945bc84ee7d3cf52",
+        "x": 740,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4737f4ea35f59ea8",
+        "type": "function",
+        "z": "cb82d2c944ac888e",
+        "name": "function 3",
+        "func": "msg.payload={\n    temperatura: Math.random()*45,\n    humedad: Math.random()*100\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 140,
+        "wires": [
+            [
+                "fdad93f322f49dcc"
+            ]
+        ]
+    },
+    {
+        "id": "f7f3e48e73547885",
+        "type": "mqtt in",
+        "z": "cb82d2c944ac888e",
+        "name": "",
+        "topic": "casa/habitacion",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "945bc84ee7d3cf52",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "8591b397d910b594"
+            ]
+        ]
+    },
+    {
+        "id": "8591b397d910b594",
+        "type": "function",
+        "z": "cb82d2c944ac888e",
+        "name": "obtenemos el tiempo",
+        "func": "msg.payload.tiempo = new Date().toISOString().slice(0, 19).replace(\"T\", \" \");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 240,
+        "wires": [
+            [
+                "058b586f6ba2103d"
+            ]
+        ]
+    },
+    {
+        "id": "058b586f6ba2103d",
+        "type": "rbe",
+        "z": "cb82d2c944ac888e",
+        "name": "filtra si la temp cambia",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.temperatura",
+        "topi": "topic",
+        "x": 640,
+        "y": 240,
+        "wires": [
+            [
+                "8fb635288c131916"
+            ]
+        ]
+    },
+    {
+        "id": "8fb635288c131916",
+        "type": "function",
+        "z": "cb82d2c944ac888e",
+        "name": "Construir SQL",
+        "func": "\n// Ahora se prepara la segunda consulta para insertar los datos\nmsg.topic = \"INSERT INTO mediciones (timestamp, temperatura, humedad) \\\n    VALUES ('\" + msg.payload.tiempo + \"', \" + msg.payload.temperatura + \", \" + msg.payload.humedad + \");\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 240,
+        "wires": [
+            [
+                "b18d9c5495189dfb"
+            ]
+        ]
+    },
+    {
+        "id": "b18d9c5495189dfb",
+        "type": "mysql",
+        "z": "cb82d2c944ac888e",
+        "mydb": "793550c9ed1fea18",
+        "name": "",
+        "x": 1010,
+        "y": 240,
+        "wires": [
+            [
+                "59ee6eab69cd3a9c"
+            ]
+        ]
+    },
+    {
+        "id": "59ee6eab69cd3a9c",
+        "type": "debug",
+        "z": "cb82d2c944ac888e",
+        "name": "datos a guardar",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cb7b4840f751505e",
+        "type": "function",
+        "z": "cb82d2c944ac888e",
+        "name": "Crear tabla",
+        "func": "msg.topic =\"CREATE TABLE IF NOT EXISTS mediciones( \\\n    id INT AUTO_INCREMENT PRIMARY KEY,\\\n    timestamp DATETIME,\\\n    temperatura FLOAT, \\\n    humedad FLOAT\\\n);\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 60,
+        "wires": [
+            [
+                "6f4a4cb62f39ef39"
+            ]
+        ]
+    },
+    {
+        "id": "6f4a4cb62f39ef39",
+        "type": "mysql",
+        "z": "cb82d2c944ac888e",
+        "mydb": "793550c9ed1fea18",
+        "name": "",
+        "x": 610,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "423140a55792cdd3",
+        "type": "inject",
+        "z": "cb82d2c944ac888e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 60,
+        "wires": [
+            [
+                "cb7b4840f751505e"
+            ]
+        ]
+    },
+    {
+        "id": "086215ed5b01d8d4",
+        "type": "inject",
+        "z": "cb82d2c944ac888e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "c13388cd79f4cbb3"
+            ]
+        ]
+    },
+    {
+        "id": "377e8f7642d74317",
+        "type": "http in",
+        "z": "cb82d2c944ac888e",
+        "name": "",
+        "url": "/habitacion",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 400,
+        "wires": [
+            [
+                "c13388cd79f4cbb3"
+            ]
+        ]
+    },
+    {
+        "id": "f6d3dd519c59fefc",
+        "type": "mysql",
+        "z": "cb82d2c944ac888e",
+        "mydb": "793550c9ed1fea18",
+        "name": "",
+        "x": 690,
+        "y": 360,
+        "wires": [
+            [
+                "7a25a9dffd16dc13"
+            ]
+        ]
+    },
+    {
+        "id": "c13388cd79f4cbb3",
+        "type": "function",
+        "z": "cb82d2c944ac888e",
+        "name": "Construir SQL",
+        "func": "msg.topic=\"SELECT * from mediciones\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [
+                "f6d3dd519c59fefc"
+            ]
+        ]
+    },
+    {
+        "id": "7a25a9dffd16dc13",
+        "type": "template",
+        "z": "cb82d2c944ac888e",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<style>\n    .data-container {\n        font-family: Arial, sans-serif;\n        margin: 10px;\n        padding: 15px;\n        background-color: #f9f9f9;\n        border-radius: 8px;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n    }\n    .data-item {\n        margin-bottom: 12px;\n        padding: 8px;\n        background-color: #fff;\n        border: 1px solid #ddd;\n        border-radius: 5px;\n    }\n    .data-item strong {\n        color: #333;\n    }\n    .data-item span {\n        color: #555;\n    }\n</style>\n\n<div class=\"data-container\">\n    {{#payload}}\n        <div class=\"data-item\">\n            <div><strong>Temperatura:</strong> <span>{{temperatura}} °C</span></div>\n            <div><strong>Humedad:</strong> <span>{{humedad}} %</span></div>\n            <div><strong>Timestamp:</strong> <span>{{timestamp}}</span></div>\n        </div>\n    {{/payload}}\n</div>\n",
+        "output": "str",
+        "x": 860,
+        "y": 360,
+        "wires": [
+            [
+                "046d69a4b9323ab7"
+            ]
+        ]
+    },
+    {
+        "id": "046d69a4b9323ab7",
+        "type": "http response",
+        "z": "cb82d2c944ac888e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 360,
         "wires": []
     }
 ]
