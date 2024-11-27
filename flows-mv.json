@@ -2,26 +2,217 @@
     {
         "id": "b756894d0585aa11",
         "type": "tab",
-        "label": "Flujo 1",
-        "disabled": false,
+        "label": "Ej-1-Nociones Basicas",
+        "disabled": true,
         "info": "",
         "env": []
     },
     {
         "id": "37605e0b888c71ab",
         "type": "tab",
-        "label": "Flujo 2",
-        "disabled": false,
+        "label": "Ej-2-Ejecutar Scripts",
+        "disabled": true,
         "info": "",
         "env": []
     },
     {
         "id": "cb82d2c944ac888e",
         "type": "tab",
-        "label": "Flujo 3",
+        "label": "Ej-3- Guardar en Bd",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "782d2dea8bfead16",
+        "type": "tab",
+        "label": "Ej-4-Endpoints y cookies",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "18a34520e630a55a",
+        "type": "tab",
+        "label": "Ej 5-BB con endpoints",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "55ef0ffabe8c9e27",
+        "type": "tab",
+        "label": "EJ 6 - Dashboards",
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "10945febd1bac4e8",
+        "type": "group",
+        "z": "cb82d2c944ac888e",
+        "name": "Crear tabla en BD",
+        "style": {
+            "stroke": "#c8e7a7",
+            "fill": "#e3f3d3",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "cb7b4840f751505e",
+            "6f4a4cb62f39ef39",
+            "423140a55792cdd3"
+        ],
+        "x": 74,
+        "y": 79,
+        "w": 532,
+        "h": 82
+    },
+    {
+        "id": "b7e40c12eb7ecee4",
+        "type": "group",
+        "z": "cb82d2c944ac888e",
+        "name": "Simulamos Lectura de Sensor",
+        "style": {
+            "label": true,
+            "stroke": "#ffff7f",
+            "fill": "#ffffbf",
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "9749ef6db3fb1dc1",
+            "fdad93f322f49dcc",
+            "4737f4ea35f59ea8"
+        ],
+        "x": 74,
+        "y": 199,
+        "w": 692,
+        "h": 82
+    },
+    {
+        "id": "47bb127782b0f4fd",
+        "type": "group",
+        "z": "cb82d2c944ac888e",
+        "name": "Obtenemos lectura y guardamos en la BD",
+        "style": {
+            "stroke": "#7fb7df",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "f7f3e48e73547885",
+            "8591b397d910b594",
+            "058b586f6ba2103d",
+            "8fb635288c131916",
+            "b18d9c5495189dfb",
+            "59ee6eab69cd3a9c"
+        ],
+        "x": 74,
+        "y": 319,
+        "w": 1212,
+        "h": 82
+    },
+    {
+        "id": "dcd6210ba83839aa",
+        "type": "group",
+        "z": "cb82d2c944ac888e",
+        "name": "Levantamos lectura y la colcoamos en un pagina web",
+        "style": {
+            "stroke": "#b797cf",
+            "fill": "#dbcbe7",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "086215ed5b01d8d4",
+            "377e8f7642d74317",
+            "f6d3dd519c59fefc",
+            "c13388cd79f4cbb3",
+            "7a25a9dffd16dc13",
+            "046d69a4b9323ab7"
+        ],
+        "x": 74,
+        "y": 439,
+        "w": 952,
+        "h": 142
+    },
+    {
+        "id": "181bbe6cb83b7ae1",
+        "type": "group",
+        "z": "782d2dea8bfead16",
+        "name": "Enviar datos por POST y que se muestren en una pagina",
+        "style": {
+            "stroke": "#c8e7a7",
+            "fill": "#e3f3d3",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "a07e91cf3d039f20",
+            "0ab53aa3c10bd4fc",
+            "a2c52888c18e44ef"
+        ],
+        "x": 314,
+        "y": 99,
+        "w": 532,
+        "h": 82
+    },
+    {
+        "id": "2008493837fc0f22",
+        "type": "group",
+        "z": "782d2dea8bfead16",
+        "name": "Manjeo de cookies",
+        "style": {
+            "stroke": "#7fb7df",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "2a80281bfc373c67",
+            "ec493b8ed9d8145b",
+            "2aab31dbfeb44eee",
+            "b707b3d100b130ad",
+            "f50cccf62aa904e8",
+            "811d15471a25a626",
+            "f3c2392bbd986995",
+            "585600785ca7cfce",
+            "5b9a829cb94fe85a"
+        ],
+        "x": 234,
+        "y": 239,
+        "w": 972,
+        "h": 242
+    },
+    {
+        "id": "034a62de0d7b5ffd",
+        "type": "group",
+        "z": "782d2dea8bfead16",
+        "name": "Consumir servicio de otra pagina",
+        "style": {
+            "stroke": "#b797cf",
+            "fill": "#dbcbe7",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "19090e3b53771ca8",
+            "6559ba82d1dbcf1f",
+            "3bbae1d2454cefde",
+            "d6510591450966d0"
+        ],
+        "x": 234,
+        "y": 579,
+        "w": 772,
+        "h": 82
     },
     {
         "id": "945bc84ee7d3cf52",
@@ -60,7 +251,7 @@
         "name": "",
         "host": "docker-mysql",
         "port": "3306",
-        "db": "test",
+        "db": "mercado",
         "tz": "",
         "charset": "UTF8"
     },
@@ -69,6 +260,167 @@
         "type": "websocket-listener",
         "path": "/habitacion",
         "wholemsg": "false"
+    },
+    {
+        "id": "8139463bd7608125",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6f0cfcae010b7b03",
+        "type": "ui_tab",
+        "name": "Productos ABM",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c344bfb0b60a162c",
+        "type": "ui_tab",
+        "name": "Productos Mas..",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e4e08d1207cc8837",
+        "type": "ui_group",
+        "name": "Agregar",
+        "tab": "6f0cfcae010b7b03",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "179bcc3c5142f858",
+        "type": "ui_group",
+        "name": "Lista",
+        "tab": "6f0cfcae010b7b03",
+        "order": 2,
+        "disp": false,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4c1092646a80ea54",
+        "type": "ui_group",
+        "name": "Opciones",
+        "tab": "c344bfb0b60a162c",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "641878b21657532b",
+        "type": "ui_group",
+        "name": "Chart",
+        "tab": "c344bfb0b60a162c",
+        "order": 2,
+        "disp": false,
+        "width": "8",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "fe7b34da155a7705",
@@ -263,7 +615,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 310,
+        "x": 270,
         "y": 340,
         "wires": [
             [
@@ -287,7 +639,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 430,
+        "x": 390,
         "y": 260,
         "wires": []
     },
@@ -303,7 +655,7 @@
         "stream": false,
         "addname": "",
         "property": "payload",
-        "x": 570,
+        "x": 530,
         "y": 340,
         "wires": [
             [
@@ -325,7 +677,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
+        "x": 630,
         "y": 260,
         "wires": []
     },
@@ -341,7 +693,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
+        "x": 740,
         "y": 340,
         "wires": [
             [
@@ -367,7 +719,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 950,
+        "x": 910,
         "y": 340,
         "wires": [
             [],
@@ -389,7 +741,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
+        "x": 1100,
         "y": 380,
         "wires": []
     },
@@ -397,6 +749,7 @@
         "id": "9749ef6db3fb1dc1",
         "type": "inject",
         "z": "cb82d2c944ac888e",
+        "g": "b7e40c12eb7ecee4",
         "name": "",
         "props": [
             {
@@ -414,8 +767,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 270,
-        "y": 140,
+        "x": 190,
+        "y": 240,
         "wires": [
             [
                 "4737f4ea35f59ea8"
@@ -426,6 +779,7 @@
         "id": "fdad93f322f49dcc",
         "type": "mqtt out",
         "z": "cb82d2c944ac888e",
+        "g": "b7e40c12eb7ecee4",
         "name": "",
         "topic": "casa/habitacion",
         "qos": "",
@@ -436,57 +790,17 @@
         "correl": "",
         "expiry": "",
         "broker": "945bc84ee7d3cf52",
-        "x": 740,
-        "y": 140,
+        "x": 660,
+        "y": 240,
         "wires": []
     },
     {
         "id": "4737f4ea35f59ea8",
         "type": "function",
         "z": "cb82d2c944ac888e",
+        "g": "b7e40c12eb7ecee4",
         "name": "function 3",
         "func": "msg.payload={\n    temperatura: Math.random()*45,\n    humedad: Math.random()*100\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 140,
-        "wires": [
-            [
-                "fdad93f322f49dcc"
-            ]
-        ]
-    },
-    {
-        "id": "f7f3e48e73547885",
-        "type": "mqtt in",
-        "z": "cb82d2c944ac888e",
-        "name": "",
-        "topic": "casa/habitacion",
-        "qos": "2",
-        "datatype": "json",
-        "broker": "945bc84ee7d3cf52",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 200,
-        "y": 240,
-        "wires": [
-            [
-                "8591b397d910b594"
-            ]
-        ]
-    },
-    {
-        "id": "8591b397d910b594",
-        "type": "function",
-        "z": "cb82d2c944ac888e",
-        "name": "obtenemos el tiempo",
-        "func": "msg.payload.tiempo = new Date().toISOString().slice(0, 19).replace(\"T\", \" \");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -497,6 +811,49 @@
         "y": 240,
         "wires": [
             [
+                "fdad93f322f49dcc"
+            ]
+        ]
+    },
+    {
+        "id": "f7f3e48e73547885",
+        "type": "mqtt in",
+        "z": "cb82d2c944ac888e",
+        "g": "47bb127782b0f4fd",
+        "name": "",
+        "topic": "casa/habitacion",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "945bc84ee7d3cf52",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 360,
+        "wires": [
+            [
+                "8591b397d910b594"
+            ]
+        ]
+    },
+    {
+        "id": "8591b397d910b594",
+        "type": "function",
+        "z": "cb82d2c944ac888e",
+        "g": "47bb127782b0f4fd",
+        "name": "obtenemos el tiempo",
+        "func": "msg.payload.tiempo = new Date().toISOString().slice(0, 19).replace(\"T\", \" \");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 360,
+        "wires": [
+            [
                 "058b586f6ba2103d"
             ]
         ]
@@ -505,6 +862,7 @@
         "id": "058b586f6ba2103d",
         "type": "rbe",
         "z": "cb82d2c944ac888e",
+        "g": "47bb127782b0f4fd",
         "name": "filtra si la temp cambia",
         "func": "rbe",
         "gap": "",
@@ -513,8 +871,8 @@
         "septopics": true,
         "property": "payload.temperatura",
         "topi": "topic",
-        "x": 640,
-        "y": 240,
+        "x": 620,
+        "y": 360,
         "wires": [
             [
                 "8fb635288c131916"
@@ -525,6 +883,7 @@
         "id": "8fb635288c131916",
         "type": "function",
         "z": "cb82d2c944ac888e",
+        "g": "47bb127782b0f4fd",
         "name": "Construir SQL",
         "func": "\n// Ahora se prepara la segunda consulta para insertar los datos\nmsg.topic = \"INSERT INTO mediciones (timestamp, temperatura, humedad) \\\n    VALUES ('\" + msg.payload.tiempo + \"', \" + msg.payload.temperatura + \", \" + msg.payload.humedad + \");\";\n\nreturn msg;\n",
         "outputs": 1,
@@ -533,8 +892,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 240,
+        "x": 820,
+        "y": 360,
         "wires": [
             [
                 "b18d9c5495189dfb"
@@ -545,10 +904,11 @@
         "id": "b18d9c5495189dfb",
         "type": "mysql",
         "z": "cb82d2c944ac888e",
+        "g": "47bb127782b0f4fd",
         "mydb": "793550c9ed1fea18",
         "name": "",
-        "x": 1010,
-        "y": 240,
+        "x": 990,
+        "y": 360,
         "wires": [
             [
                 "59ee6eab69cd3a9c"
@@ -559,6 +919,7 @@
         "id": "59ee6eab69cd3a9c",
         "type": "debug",
         "z": "cb82d2c944ac888e",
+        "g": "47bb127782b0f4fd",
         "name": "datos a guardar",
         "active": true,
         "tosidebar": true,
@@ -568,14 +929,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1180,
-        "y": 240,
+        "x": 1160,
+        "y": 360,
         "wires": []
     },
     {
         "id": "cb7b4840f751505e",
         "type": "function",
         "z": "cb82d2c944ac888e",
+        "g": "10945febd1bac4e8",
         "name": "Crear tabla",
         "func": "msg.topic =\"CREATE TABLE IF NOT EXISTS mediciones( \\\n    id INT AUTO_INCREMENT PRIMARY KEY,\\\n    timestamp DATETIME,\\\n    temperatura FLOAT, \\\n    humedad FLOAT\\\n);\"\nreturn msg;",
         "outputs": 1,
@@ -584,8 +946,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 60,
+        "x": 370,
+        "y": 120,
         "wires": [
             [
                 "6f4a4cb62f39ef39"
@@ -596,10 +958,11 @@
         "id": "6f4a4cb62f39ef39",
         "type": "mysql",
         "z": "cb82d2c944ac888e",
+        "g": "10945febd1bac4e8",
         "mydb": "793550c9ed1fea18",
         "name": "",
-        "x": 610,
-        "y": 60,
+        "x": 530,
+        "y": 120,
         "wires": [
             []
         ]
@@ -608,6 +971,7 @@
         "id": "423140a55792cdd3",
         "type": "inject",
         "z": "cb82d2c944ac888e",
+        "g": "10945febd1bac4e8",
         "name": "",
         "props": [
             {
@@ -625,18 +989,20 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 270,
-        "y": 60,
+        "x": 135,
+        "y": 120,
         "wires": [
             [
                 "cb7b4840f751505e"
             ]
-        ]
+        ],
+        "l": false
     },
     {
         "id": "086215ed5b01d8d4",
         "type": "inject",
         "z": "cb82d2c944ac888e",
+        "g": "dcd6210ba83839aa",
         "name": "",
         "props": [
             {
@@ -654,8 +1020,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 290,
-        "y": 340,
+        "x": 210,
+        "y": 480,
         "wires": [
             [
                 "c13388cd79f4cbb3"
@@ -666,13 +1032,14 @@
         "id": "377e8f7642d74317",
         "type": "http in",
         "z": "cb82d2c944ac888e",
+        "g": "dcd6210ba83839aa",
         "name": "",
         "url": "/habitacion",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 260,
-        "y": 400,
+        "x": 180,
+        "y": 540,
         "wires": [
             [
                 "c13388cd79f4cbb3"
@@ -683,10 +1050,11 @@
         "id": "f6d3dd519c59fefc",
         "type": "mysql",
         "z": "cb82d2c944ac888e",
+        "g": "dcd6210ba83839aa",
         "mydb": "793550c9ed1fea18",
         "name": "",
-        "x": 690,
-        "y": 360,
+        "x": 610,
+        "y": 500,
         "wires": [
             [
                 "7a25a9dffd16dc13"
@@ -697,6 +1065,7 @@
         "id": "c13388cd79f4cbb3",
         "type": "function",
         "z": "cb82d2c944ac888e",
+        "g": "dcd6210ba83839aa",
         "name": "Construir SQL",
         "func": "msg.topic=\"SELECT * from mediciones\";\nreturn msg;",
         "outputs": 1,
@@ -705,8 +1074,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
-        "y": 360,
+        "x": 420,
+        "y": 500,
         "wires": [
             [
                 "f6d3dd519c59fefc"
@@ -717,6 +1086,7 @@
         "id": "7a25a9dffd16dc13",
         "type": "template",
         "z": "cb82d2c944ac888e",
+        "g": "dcd6210ba83839aa",
         "name": "",
         "field": "payload",
         "fieldType": "msg",
@@ -724,8 +1094,8 @@
         "syntax": "mustache",
         "template": "<style>\n    .data-container {\n        font-family: Arial, sans-serif;\n        margin: 10px;\n        padding: 15px;\n        background-color: #f9f9f9;\n        border-radius: 8px;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n    }\n    .data-item {\n        margin-bottom: 12px;\n        padding: 8px;\n        background-color: #fff;\n        border: 1px solid #ddd;\n        border-radius: 5px;\n    }\n    .data-item strong {\n        color: #333;\n    }\n    .data-item span {\n        color: #555;\n    }\n</style>\n\n<div class=\"data-container\">\n    {{#payload}}\n        <div class=\"data-item\">\n            <div><strong>Temperatura:</strong> <span>{{temperatura}} °C</span></div>\n            <div><strong>Humedad:</strong> <span>{{humedad}} %</span></div>\n            <div><strong>Timestamp:</strong> <span>{{timestamp}}</span></div>\n        </div>\n    {{/payload}}\n</div>\n",
         "output": "str",
-        "x": 860,
-        "y": 360,
+        "x": 780,
+        "y": 500,
         "wires": [
             [
                 "046d69a4b9323ab7"
@@ -736,11 +1106,1239 @@
         "id": "046d69a4b9323ab7",
         "type": "http response",
         "z": "cb82d2c944ac888e",
+        "g": "dcd6210ba83839aa",
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1030,
+        "x": 950,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a07e91cf3d039f20",
+        "type": "http in",
+        "z": "782d2dea8bfead16",
+        "g": "181bbe6cb83b7ae1",
+        "name": "",
+        "url": "raw_body",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [
+                "a2c52888c18e44ef"
+            ]
+        ]
+    },
+    {
+        "id": "0ab53aa3c10bd4fc",
+        "type": "http response",
+        "z": "782d2dea8bfead16",
+        "g": "181bbe6cb83b7ae1",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a2c52888c18e44ef",
+        "type": "template",
+        "z": "782d2dea8bfead16",
+        "g": "181bbe6cb83b7ae1",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n    <title> Raw Data </title>\n    <body>\n        {{payload}}\n    </body>    \n</html>\n",
+        "output": "str",
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "0ab53aa3c10bd4fc"
+            ]
+        ]
+    },
+    {
+        "id": "2a80281bfc373c67",
+        "type": "http in",
+        "z": "782d2dea8bfead16",
+        "g": "2008493837fc0f22",
+        "name": "",
+        "url": "hello-cookie",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "2aab31dbfeb44eee"
+            ]
+        ]
+    },
+    {
+        "id": "ec493b8ed9d8145b",
+        "type": "template",
+        "z": "782d2dea8bfead16",
+        "g": "2008493837fc0f22",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n  <head>\n    <style>\n      body {\n        font-family: Arial, sans-serif;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        min-height: 100vh;\n        background-color: #f4f4f9;\n        margin: 0;\n      }\n      .container {\n        max-width: 600px;\n        text-align: center;\n        padding: 20px;\n        background-color: #fff;\n        border-radius: 8px;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n      }\n      h1 {\n        color: #333;\n        margin-bottom: 20px;\n      }\n      p {\n        font-size: 18px;\n      }\n      a {\n        color: #007bff;\n        text-decoration: none;\n        margin: 0 10px;\n      }\n      a:hover {\n        text-decoration: underline;\n      }\n      pre {\n        background-color: #f8f9fa;\n        border: 1px solid #ddd;\n        padding: 10px;\n        border-radius: 5px;\n        margin-top: 20px;\n        text-align: left;\n        color: #333;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"container\">\n      <h1>Cookies</h1>\n      <p>\n        <a href=\"/add-cookie\">Agregar cookie</a> &bull;\n        <a href=\"/remove-cookie\">Borrar cookie</a>\n      </p>\n      <pre>{{ payload }}</pre>\n    </div>\n  </body>\n</html>\n",
+        "output": "str",
+        "x": 780,
+        "y": 280,
+        "wires": [
+            [
+                "b707b3d100b130ad"
+            ]
+        ]
+    },
+    {
+        "id": "2aab31dbfeb44eee",
+        "type": "function",
+        "z": "782d2dea8bfead16",
+        "g": "2008493837fc0f22",
+        "name": "obtenemos las cookies",
+        "func": "//obtenemos las cookies, las guardamos como un string\n//y las almacenamos en el payload\n\nmsg.payload= JSON.stringify(msg.req.cookies,null,4)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 280,
+        "wires": [
+            [
+                "ec493b8ed9d8145b"
+            ]
+        ]
+    },
+    {
+        "id": "b707b3d100b130ad",
+        "type": "http response",
+        "z": "782d2dea8bfead16",
+        "g": "2008493837fc0f22",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1130,
         "y": 360,
         "wires": []
+    },
+    {
+        "id": "f50cccf62aa904e8",
+        "type": "http in",
+        "z": "782d2dea8bfead16",
+        "g": "2008493837fc0f22",
+        "name": "",
+        "url": "add-cookie",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 340,
+        "y": 360,
+        "wires": [
+            [
+                "811d15471a25a626"
+            ]
+        ]
+    },
+    {
+        "id": "811d15471a25a626",
+        "type": "function",
+        "z": "782d2dea8bfead16",
+        "g": "2008493837fc0f22",
+        "name": "Guardamos Nueva Cookie",
+        "func": "//creamos el obj\nmsg.cookies = {};\n//Le aseignamos un clave generada dinaimicamente (algo asi como un id)\nmsg.cookies[\"demo-\" + (Math.floor(Math.random() * 1000))] = Date.now(); \nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 360,
+        "wires": [
+            [
+                "f3c2392bbd986995"
+            ]
+        ]
+    },
+    {
+        "id": "f3c2392bbd986995",
+        "type": "change",
+        "z": "782d2dea8bfead16",
+        "g": "2008493837fc0f22",
+        "name": "Refrescamos la pag",
+        "rules": [
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "302",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.location",
+                "pt": "msg",
+                "to": "/hello-cookie",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 400,
+        "wires": [
+            [
+                "b707b3d100b130ad"
+            ]
+        ]
+    },
+    {
+        "id": "585600785ca7cfce",
+        "type": "http in",
+        "z": "782d2dea8bfead16",
+        "g": "2008493837fc0f22",
+        "name": "",
+        "url": "remove-cookie",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "5b9a829cb94fe85a"
+            ]
+        ]
+    },
+    {
+        "id": "5b9a829cb94fe85a",
+        "type": "function",
+        "z": "782d2dea8bfead16",
+        "g": "2008493837fc0f22",
+        "name": "Eliminamos Todas las Cookies",
+        "func": "//Obtenemos todas las cookies almacenadas en msg.req.cookies y las filtramos de acuerdo/\n//a una condicion\nvar cookieNames = Object.keys(msg.req.cookies).filter(function(cookieName) {\n    return /^demo-/.test(cookieName);\n});\nmsg.cookies = {};\n\n//Aqui borramos todas las cookies asignandoles como clave null\ncookieNames.forEach(function(cookieName) {\n    msg.cookies[cookieName] = null;\n});\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 440,
+        "wires": [
+            [
+                "f3c2392bbd986995"
+            ]
+        ]
+    },
+    {
+        "id": "19090e3b53771ca8",
+        "type": "http in",
+        "z": "782d2dea8bfead16",
+        "g": "034a62de0d7b5ffd",
+        "name": "",
+        "url": "/personas",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 340,
+        "y": 620,
+        "wires": [
+            [
+                "3bbae1d2454cefde"
+            ]
+        ]
+    },
+    {
+        "id": "6559ba82d1dbcf1f",
+        "type": "http response",
+        "z": "782d2dea8bfead16",
+        "g": "034a62de0d7b5ffd",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 930,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "3bbae1d2454cefde",
+        "type": "https-node",
+        "z": "782d2dea8bfead16",
+        "g": "034a62de0d7b5ffd",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://randomuser.me/api/?results=20",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 550,
+        "y": 620,
+        "wires": [
+            [
+                "d6510591450966d0"
+            ]
+        ]
+    },
+    {
+        "id": "d6510591450966d0",
+        "type": "template",
+        "z": "782d2dea8bfead16",
+        "g": "034a62de0d7b5ffd",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!-- Estilos personalizados -->\n<style>\n  .custom-grid .thumbnail {\n    border: 1px solid #ddd;\n    border-radius: 8px;\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\n    height: 350px; /* Altura fija para los paneles */\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n  }\n  .custom-grid .thumbnail:hover {\n    transform: scale(1.05);\n    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);\n  }\n  .custom-grid .thumbnail img {\n    border-radius: 8px 8px 0 0;\n    object-fit: cover; /* Asegura que las imágenes se ajusten al contenedor */\n    width: 100%; /* Ocupa el ancho completo */\n    height: 180px; /* Altura fija para las imágenes */\n  }\n  .custom-grid .caption {\n    background-color: #f8f9fa;\n    padding: 15px;\n    border-top: 1px solid #ddd;\n    border-radius: 0 0 8px 8px;\n    flex-grow: 1; /* Permite que el contenido crezca uniformemente */\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    text-align: center;\n  }\n  .custom-grid {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 20px;\n    justify-content: center;\n  }\n</style>\n\n<div class=\"container\">\n  <div class=\"custom-grid\">\n    {{#payload.results}}\n    <div class=\"col-lg-3 col-md-4 col-sm-6\">\n      <div class=\"thumbnail\">\n        <img src=\"{{picture.large}}\" alt=\"Imagen de {{name.first}} {{name.last}}\">\n        <div class=\"caption\">\n          <h4>{{name.title}} {{name.first}} {{name.last}}</h4>\n          <p><i class=\"glyphicon glyphicon-envelope\"></i> {{email}}</p>\n        </div>\n      </div>\n    </div>\n    {{/payload.results}}\n  </div>\n</div>\n",
+        "output": "str",
+        "x": 740,
+        "y": 620,
+        "wires": [
+            [
+                "6559ba82d1dbcf1f"
+            ]
+        ]
+    },
+    {
+        "id": "0b43d7e7ba2b69c3",
+        "type": "mysql",
+        "z": "18a34520e630a55a",
+        "mydb": "793550c9ed1fea18",
+        "name": "Creamos DB",
+        "x": 570,
+        "y": 180,
+        "wires": [
+            [
+                "f89c0e0138bba7fb"
+            ]
+        ]
+    },
+    {
+        "id": "58772186018f64f1",
+        "type": "inject",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 355,
+        "y": 180,
+        "wires": [
+            [
+                "d6d1cf30eac75c95"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "d6d1cf30eac75c95",
+        "type": "template",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CREATE DATABASE IF NOT EXISTS db1 CHARACTER SET utf8;\nCREATE TABLE IF NOT EXISTS db1.personas (\n    id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,\n    nombre VARCHAR(50) NOT NULL,\n    apellido VARCHAR(50) NOT NULL,\n    email VARCHAR(200) NOT NULL UNIQUE,\n    fecha_nacimiento DATE\n);",
+        "output": "str",
+        "x": 435,
+        "y": 180,
+        "wires": [
+            [
+                "0b43d7e7ba2b69c3"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "f89c0e0138bba7fb",
+        "type": "debug",
+        "z": "18a34520e630a55a",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "df51352a0bcd8ae6",
+        "type": "http in",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "url": "/add-persona",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 410,
+        "y": 260,
+        "wires": [
+            [
+                "4a2a60e22856bee1"
+            ]
+        ]
+    },
+    {
+        "id": "5aeb4df39c87d918",
+        "type": "http response",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9667fecce72fd12b",
+        "type": "mysql",
+        "z": "18a34520e630a55a",
+        "mydb": "793550c9ed1fea18",
+        "name": "Creamos persona",
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "5aeb4df39c87d918"
+            ]
+        ]
+    },
+    {
+        "id": "4a2a60e22856bee1",
+        "type": "template",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO db1.personas (apellido, nombre, email, fecha_nacimiento)\nVALUES (\n    '{{payload.apellido}}',\n    '{{payload.nombre}}',\n    '{{payload.email}}',\n    '{{payload.fecha_nacimiento}}'\n);",
+        "output": "str",
+        "x": 535,
+        "y": 260,
+        "wires": [
+            [
+                "9667fecce72fd12b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "2dc554ed1f4587c7",
+        "type": "catch",
+        "z": "18a34520e630a55a",
+        "name": "SI captura error...",
+        "scope": [
+            "9667fecce72fd12b",
+            "3938627987ff71c3",
+            "5d0bc4efb6e6fe86"
+        ],
+        "uncaught": false,
+        "x": 300,
+        "y": 580,
+        "wires": [
+            [
+                "4ddd9037f86939fe"
+            ]
+        ]
+    },
+    {
+        "id": "6204a8a9f6ea30b3",
+        "type": "debug",
+        "z": "18a34520e630a55a",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "4ddd9037f86939fe",
+        "type": "change",
+        "z": "18a34520e630a55a",
+        "name": "cambiamos el payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "error.message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 580,
+        "wires": [
+            [
+                "6204a8a9f6ea30b3",
+                "5107793d44a615b8"
+            ]
+        ]
+    },
+    {
+        "id": "46781a05c6abec04",
+        "type": "http response",
+        "z": "18a34520e630a55a",
+        "name": "Devolvemos un 500",
+        "statusCode": "500",
+        "headers": {},
+        "x": 1000,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "5107793d44a615b8",
+        "type": "change",
+        "z": "18a34520e630a55a",
+        "name": "editamos payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Ha habido un error de servidor",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 580,
+        "wires": [
+            [
+                "46781a05c6abec04"
+            ]
+        ],
+        "info": "Esto se hace por seguridad"
+    },
+    {
+        "id": "f0b099848d642869",
+        "type": "http in",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "url": "/personas",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 400,
+        "y": 320,
+        "wires": [
+            [
+                "8e7967205cb4855c"
+            ]
+        ]
+    },
+    {
+        "id": "8e7967205cb4855c",
+        "type": "template",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT * FROM db1.personas ORDER BY apellido, nombre",
+        "output": "str",
+        "x": 535,
+        "y": 320,
+        "wires": [
+            [
+                "3938627987ff71c3"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3938627987ff71c3",
+        "type": "mysql",
+        "z": "18a34520e630a55a",
+        "mydb": "793550c9ed1fea18",
+        "name": "Select",
+        "x": 650,
+        "y": 320,
+        "wires": [
+            [
+                "dffc88bdb34adc9c"
+            ]
+        ]
+    },
+    {
+        "id": "dffc88bdb34adc9c",
+        "type": "http response",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "dcd67913f21b4a24",
+        "type": "comment",
+        "z": "18a34520e630a55a",
+        "name": "Agregar una persona",
+        "info": "",
+        "x": 180,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c769a550b04d26c6",
+        "type": "comment",
+        "z": "18a34520e630a55a",
+        "name": "Ver listado de personas",
+        "info": "",
+        "x": 180,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4acd6db8b5595511",
+        "type": "http in",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "url": "/delete-persona/:id",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [
+                "dbc7bba9f79bb007"
+            ]
+        ]
+    },
+    {
+        "id": "dbc7bba9f79bb007",
+        "type": "template",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "DELETE FROM db1.personas WHERE id={{req.params.id}}",
+        "output": "str",
+        "x": 595,
+        "y": 380,
+        "wires": [
+            [
+                "5d0bc4efb6e6fe86"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "5d0bc4efb6e6fe86",
+        "type": "mysql",
+        "z": "18a34520e630a55a",
+        "mydb": "793550c9ed1fea18",
+        "name": "Delete",
+        "x": 690,
+        "y": 380,
+        "wires": [
+            [
+                "9c824b04c1fa20bc"
+            ]
+        ]
+    },
+    {
+        "id": "9c824b04c1fa20bc",
+        "type": "http response",
+        "z": "18a34520e630a55a",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "4605fcefcd80cf02",
+        "type": "ui_form",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "label": "",
+        "group": "e4e08d1207cc8837",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Producto",
+                "value": "producto",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Precio",
+                "value": "precio",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "En stock?",
+                "value": "enStock",
+                "type": "switch",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "producto": "",
+            "precio": "",
+            "enStock": false
+        },
+        "payload": "",
+        "submit": "OK",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "4b3a272a06ea2a22"
+            ]
+        ]
+    },
+    {
+        "id": "e5768fdb39adf4f0",
+        "type": "mysql",
+        "z": "55ef0ffabe8c9e27",
+        "mydb": "793550c9ed1fea18",
+        "name": "Creamos DB",
+        "x": 350,
+        "y": 120,
+        "wires": [
+            [
+                "a60cbc835258cfd2"
+            ]
+        ]
+    },
+    {
+        "id": "b9fbf1af02fd75d3",
+        "type": "inject",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 135,
+        "y": 120,
+        "wires": [
+            [
+                "6176d09659eb17d0"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "6176d09659eb17d0",
+        "type": "template",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "CREATE DATABASE IF NOT EXISTS mercado CHARACTER SET utf8;\nCREATE TABLE IF NOT EXISTS productos (\n    producto VARCHAR(50) NOT NULL,\n    precio DECIMAL(10, 2) NOT NULL,\n    enStock BOOLEAN NOT NULL\n);\n",
+        "output": "str",
+        "x": 215,
+        "y": 120,
+        "wires": [
+            [
+                "e5768fdb39adf4f0"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "a60cbc835258cfd2",
+        "type": "debug",
+        "z": "55ef0ffabe8c9e27",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d5d61a5b76f970f9",
+        "type": "mysql",
+        "z": "55ef0ffabe8c9e27",
+        "mydb": "793550c9ed1fea18",
+        "name": "Creamos DB",
+        "x": 550,
+        "y": 200,
+        "wires": [
+            [
+                "cf45afa4a9f6f329"
+            ]
+        ]
+    },
+    {
+        "id": "0113ebc7a04a6047",
+        "type": "template",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO productos (producto, precio, enStock)\nVALUES ( \n    '{{payload.producto}}',\n    '{{payload.precio}}',\n    '{{payload.enStock}}');\n",
+        "output": "str",
+        "x": 425,
+        "y": 200,
+        "wires": [
+            [
+                "d5d61a5b76f970f9"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "0a0ee3d7520dc8b8",
+        "type": "inject",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 125,
+        "y": 320,
+        "wires": [
+            [
+                "9c48f06a0ade0b3b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "cf45afa4a9f6f329",
+        "type": "debug",
+        "z": "55ef0ffabe8c9e27",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "82cd81a5bc3c5aaa",
+        "type": "debug",
+        "z": "55ef0ffabe8c9e27",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4b3a272a06ea2a22",
+        "type": "function",
+        "z": "55ef0ffabe8c9e27",
+        "name": "function 4",
+        "func": "if(msg.payload.enStock == true){\n    msg.payload.enStock=1;\n}else{\n    msg.payload.enStock=0;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 200,
+        "wires": [
+            [
+                "0113ebc7a04a6047",
+                "82cd81a5bc3c5aaa"
+            ]
+        ]
+    },
+    {
+        "id": "e29975a4f7c0ba80",
+        "type": "mysql",
+        "z": "55ef0ffabe8c9e27",
+        "mydb": "793550c9ed1fea18",
+        "name": "Select All",
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "9a2a4a8ed58196cc"
+            ]
+        ]
+    },
+    {
+        "id": "9c48f06a0ade0b3b",
+        "type": "template",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT * FROM productos\n",
+        "output": "str",
+        "x": 185,
+        "y": 320,
+        "wires": [
+            [
+                "e29975a4f7c0ba80"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9a2a4a8ed58196cc",
+        "type": "debug",
+        "z": "55ef0ffabe8c9e27",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4e91d93185f9b8c6",
+        "type": "ui_button",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "group": "4c1092646a80ea54",
+        "order": 0,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Refrescar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 400,
+        "wires": [
+            [
+                "dfa462023ccabc44"
+            ]
+        ]
+    },
+    {
+        "id": "ec818ea9592a22c8",
+        "type": "mysql",
+        "z": "55ef0ffabe8c9e27",
+        "mydb": "793550c9ed1fea18",
+        "name": "Select all OrderBy Precio",
+        "x": 450,
+        "y": 400,
+        "wires": [
+            [
+                "424f3f721f807aea"
+            ]
+        ]
+    },
+    {
+        "id": "dfa462023ccabc44",
+        "type": "template",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "SELECT * FROM productos ORDER BY precio desc limit 5;\n",
+        "output": "str",
+        "x": 265,
+        "y": 400,
+        "wires": [
+            [
+                "ec818ea9592a22c8"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "40f5e77f60b52273",
+        "type": "ui_chart",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "group": "641878b21657532b",
+        "order": 0,
+        "width": "8",
+        "height": "8",
+        "label": "5 productos mas caros",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1060,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "424f3f721f807aea",
+        "type": "split",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "splt": "",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 650,
+        "y": 440,
+        "wires": [
+            [
+                "caf2faf866e248e1"
+            ]
+        ]
+    },
+    {
+        "id": "caf2faf866e248e1",
+        "type": "change",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.producto",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.precio",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 440,
+        "wires": [
+            [
+                "40f5e77f60b52273"
+            ]
+        ]
+    },
+    {
+        "id": "ef5b00d165937cad",
+        "type": "debug",
+        "z": "55ef0ffabe8c9e27",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "efa6653475aa52d9",
+        "type": "function",
+        "z": "55ef0ffabe8c9e27",
+        "name": "Limpiar el grafico",
+        "func": "msg.payload = [];\nmsg.topic=[];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 520,
+        "wires": [
+            [
+                "40f5e77f60b52273"
+            ]
+        ]
+    },
+    {
+        "id": "ab0dd5fa4b386e0d",
+        "type": "ui_button",
+        "z": "55ef0ffabe8c9e27",
+        "name": "",
+        "group": "4c1092646a80ea54",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Limpiar Grafico",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "delete",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 540,
+        "y": 520,
+        "wires": [
+            [
+                "efa6653475aa52d9"
+            ]
+        ]
     }
 ]
