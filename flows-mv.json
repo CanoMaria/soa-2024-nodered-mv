@@ -56,18 +56,10 @@
         "env": []
     },
     {
-        "id": "ee68f309ebd76fe2",
+        "id": "07ac3d9de4fc1555",
         "type": "tab",
-        "label": "Flujo 1",
+        "label": "Casa",
         "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "698bdcf08b44c5be",
-        "type": "tab",
-        "label": "Sist.Principal",
-        "disabled": true,
         "info": "",
         "env": []
     },
@@ -159,33 +151,108 @@
                 "y": 80,
                 "wires": [
                     {
-                        "id": "8b6f9eca269692b4"
+                        "id": "b3094ebea05a631f"
                     }
                 ]
             }
         ],
         "out": [
             {
-                "x": 1220,
-                "y": 40,
+                "x": 1280,
+                "y": 80,
                 "wires": [
                     {
-                        "id": "eac6eeb13fe60de7",
-                        "port": 0
-                    },
-                    {
-                        "id": "a4bf9ccb98a8748d",
+                        "id": "7b2133f7bb3d836e",
                         "port": 0
                     }
                 ]
+            }
+        ],
+        "env": [
+            {
+                "name": "Url_base",
+                "type": "str",
+                "value": "http://servicesoa.mooo.com:8080/"
             },
             {
-                "x": 1220,
-                "y": 100,
+                "name": "auxiliar",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "d2680f12a3dc24de",
+        "type": "subflow",
+        "name": "Obtener Token",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 220,
                 "wires": [
                     {
-                        "id": "eac6eeb13fe60de7",
-                        "port": 1
+                        "id": "9b121580a85bda87"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [
+            {
+                "name": "Username",
+                "type": "str",
+                "value": "admin"
+            },
+            {
+                "name": "Password",
+                "type": "str",
+                "value": "123"
+            },
+            {
+                "name": "Url_base",
+                "type": "str",
+                "value": "http://servicesoa.mooo.com:8080/"
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "fc5941cb0302ac97",
+        "type": "subflow",
+        "name": "Dashboards",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 640,
+                "wires": [
+                    {
+                        "id": "1c6ffb25817feba9"
+                    },
+                    {
+                        "id": "3433d56d483e640b"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1020,
+                "y": 400,
+                "wires": [
+                    {
+                        "id": "33c4d5658363228b",
+                        "port": 0
+                    },
+                    {
+                        "id": "ab4e3bdfc1620909",
+                        "port": "1"
                     }
                 ]
             }
@@ -199,6 +266,70 @@
         ],
         "meta": {},
         "color": "#DDAA99"
+    },
+    {
+        "id": "ac29ba59b64e1371",
+        "type": "subflow",
+        "name": "Status Backend",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "5d0189ab4573c7ec"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1080,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "f0b401b523709f87",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1080,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "43fd8632481961b9",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1080,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "239df298e91136c4",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "Url_base",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99",
+        "outputLabels": [
+            "403",
+            "200",
+            "500"
+        ]
     },
     {
         "id": "10945febd1bac4e8",
@@ -219,7 +350,7 @@
         ],
         "x": 74,
         "y": 79,
-        "w": 532,
+        "w": 542,
         "h": 82
     },
     {
@@ -368,6 +499,76 @@
         "h": 82
     },
     {
+        "id": "eb50bfca794ce08c",
+        "type": "group",
+        "z": "d2680f12a3dc24de",
+        "name": "Solicitud de token",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffdf7f",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "e36bbb75880fe9ab",
+            "2f5c95ae917215c4",
+            "c7415a5f1871fc92",
+            "9b121580a85bda87",
+            "c1d8280908390c1d"
+        ],
+        "x": 134,
+        "y": 119,
+        "w": 1112,
+        "h": 142
+    },
+    {
+        "id": "45f717a1a599c4fe",
+        "type": "group",
+        "z": "d2680f12a3dc24de",
+        "name": "Reemplazamos variable global",
+        "style": {
+            "stroke": "#ff3f3f",
+            "fill": "#ff7f7f",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "56e49fea742b7431",
+            "7b599b5c5f376d39",
+            "099e4f4b576a71f4",
+            "5cd6d945892fcb4d"
+        ],
+        "x": 34,
+        "y": 319,
+        "w": 1212,
+        "h": 82
+    },
+    {
+        "id": "5966bc425910be97",
+        "type": "group",
+        "z": "07ac3d9de4fc1555",
+        "name": "Guardado de Historico",
+        "style": {
+            "stroke": "#7fb7df",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "s",
+            "color": "#000000"
+        },
+        "nodes": [
+            "a0362523ba8a161d",
+            "68e2c420a7f6d38d",
+            "995eb247f2824ad0",
+            "5fe3c53065f5712c"
+        ],
+        "x": 174,
+        "y": 399,
+        "w": 772,
+        "h": 150
+    },
+    {
         "id": "945bc84ee7d3cf52",
         "type": "mqtt-broker",
         "name": "",
@@ -508,173 +709,13 @@
         }
     },
     {
-        "id": "6f0cfcae010b7b03",
-        "type": "ui_tab",
-        "name": "Productos ABM",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "c344bfb0b60a162c",
-        "type": "ui_tab",
-        "name": "Productos Mas..",
-        "icon": "dashboard",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "e4e08d1207cc8837",
-        "type": "ui_group",
-        "name": "Agregar",
-        "tab": "6f0cfcae010b7b03",
-        "order": 1,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "179bcc3c5142f858",
-        "type": "ui_group",
-        "name": "Lista",
-        "tab": "6f0cfcae010b7b03",
-        "order": 2,
-        "disp": false,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "4c1092646a80ea54",
-        "type": "ui_group",
-        "name": "Opciones",
-        "tab": "c344bfb0b60a162c",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "641878b21657532b",
-        "type": "ui_group",
-        "name": "Chart",
-        "tab": "c344bfb0b60a162c",
-        "order": 2,
-        "disp": false,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "a2d534a762f95492",
         "type": "ui_tab",
-        "name": "Grafico",
+        "name": "Tiempo Real",
         "icon": "dashboard",
-        "order": 1,
+        "order": 3,
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "8bb39f7211ad356d",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-dark",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#097479",
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#0eb8c0",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#555555",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
     },
     {
         "id": "02d9f0336a5415d6",
@@ -703,6 +744,354 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "ef667f0e8eba276f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "eclipse-mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f9719c67279e5588",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "eclipse-mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ba47e3278550aa1a",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "a63686dd3a94ce57",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0116b437be5f9659",
+        "type": "ui_group",
+        "name": "Datos en Tiempo Real",
+        "tab": "a2d534a762f95492",
+        "order": 1,
+        "disp": true,
+        "width": "30",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "27367b481b900887",
+        "type": "ui_tab",
+        "name": "Historico",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "79ad6e65f3bd4a4a",
+        "type": "ui_group",
+        "z": "fc5941cb0302ac97",
+        "name": "Tabla de Historicos",
+        "tab": "27367b481b900887",
+        "order": 3,
+        "disp": true,
+        "width": 30,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "73c51f16fe41c669",
+        "type": "ui_group",
+        "z": "fc5941cb0302ac97",
+        "name": "Categoria",
+        "tab": "27367b481b900887",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e3a0966134bb0dd3",
+        "type": "ui_group",
+        "z": "fc5941cb0302ac97",
+        "name": "Subcategoria",
+        "tab": "27367b481b900887",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "737f6f5cdda70c5d",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "eclipse-mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e678dd0b3265d717",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2d6e75e8722e9de3",
+        "type": "ui_group",
+        "name": "Barras",
+        "tab": "a2d534a762f95492",
+        "order": 2,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "27921eda4924e8cf",
+        "type": "ui_group",
+        "name": "Tabla",
+        "tab": "a2d534a762f95492",
+        "order": 1,
+        "disp": true,
+        "width": "30",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "80b56bfc586cf4f9",
+        "type": "ui_group",
+        "name": "Input",
+        "tab": "a2d534a762f95492",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f94a39eab9b64e5f",
+        "type": "ui_group",
+        "z": "fc5941cb0302ac97",
+        "name": "Ultimo Estado TK02",
+        "tab": "27367b481b900887",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b69eaee3dd875d9e",
+        "type": "ui_group",
+        "z": "fc5941cb0302ac97",
+        "name": "Ultimo Estado TK01",
+        "tab": "27367b481b900887",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2f3b80a5149baf5c",
+        "type": "ui_group",
+        "z": "fc5941cb0302ac97",
+        "name": "Temperatura TK01",
+        "tab": "27367b481b900887",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b0422ad59ff63227",
+        "type": "ui_group",
+        "z": "fc5941cb0302ac97",
+        "name": "Temperatura TK2",
+        "tab": "27367b481b900887",
+        "order": 8,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "74c1f30576f8a22a",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "1b9821820ef47013",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "318ff90f669d6559",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "54fdc6b2aab1a40a",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "3fd3321e069fdf61",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 7,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "5041e3d644837903",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 8,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "130709f00f41ffd7",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 9,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "6479607b8283c2c4",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 10,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "675df288665a0c0f",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 11,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "bc4b33e38a05fe9f",
+        "type": "ui_spacer",
+        "z": "fc5941cb0302ac97",
+        "name": "spacer",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 12,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "66eb1b3dd423484e",
+        "type": "ui_group",
+        "z": "fc5941cb0302ac97",
+        "name": "Tamanio",
+        "tab": "27367b481b900887",
+        "order": 8,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "929602daf43b8229",
@@ -945,18 +1334,18 @@
         "type": "function",
         "z": "8af27b7d138b7544",
         "name": "Creamos url",
-        "func": "//obtnenemos el valor de la variable token\nlet token = JSON.parse(global.get(\"token\"))\n//construimos la url para guardar el historico \nlet url = `${msg.url_base}historico/add?token=${token.authtoken}`;\n//almacenamos la url y permitimos que en caso de error se muestre en los logs\nmsg.url = url\nnode.warn(msg.url);\nreturn msg;",
+        "func": "//obtnenemos el valor de la variable token\nlet token = JSON.parse(global.get(\"token\"))\n//construimos la url para guardar el historico \nlet url = `${msg.url_base}historico/add?token=${token.authtoken}`;\n//almacenamos la url y permitimos que en caso de error se muestre en los logs\nmsg.url = url\n//node.warn(msg.url);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
+        "x": 850,
         "y": 80,
         "wires": [
             [
-                "85857c529a8ec347"
+                "940a2d5263d02ec2"
             ]
         ]
     },
@@ -976,11 +1365,11 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 890,
+        "x": 1090,
         "y": 80,
         "wires": [
             [
-                "eac6eeb13fe60de7"
+                "7b2133f7bb3d836e"
             ]
         ]
     },
@@ -995,7 +1384,7 @@
         "syntax": "mustache",
         "template": "{\n    \"fechaHoraRecepcion\":\"\",\n    \"rawData\":{\n        \"temperatura\":\"{{payload.rawData.temperatura}}\",\n        \"humedad\":\"{{payload.rawData.humedad}}\",\n        \"presion\":\"{{payload.rawData.presion}}\"\n    },\n    \"ubicacion\":{\n        \"ciudad\":\"{{payload.ubicacion.ciudad}}\",\n        \"region\":\"{{payload.ubicacion.region}}\",\n        \"pais\":\"{{payload.ubicacion.pais}}\",\n        \"coordenadas\":\"{{payload.ubicacion.coordenadas}}\",\n        \"codigoPostal\":\"{{payload.ubicacion.codigoPostal}}\",\n        \"zonaHoraria\":\"{{payload.ubicacion.zonaHoraria}}\"\n    },\n    \"categoria\":\"{{payload.categoria}}\",\n    \"subCategoria\":\"{{payload.subCategoria}}\",\n    \"identificador\":\"{{payload.identificador}}\",\n    \"puntoRocio\":{{payload.puntoRocio}},\n    \"altitud\":{{payload.altitud}}\n}",
         "output": "json",
-        "x": 290,
+        "x": 390,
         "y": 80,
         "wires": [
             [
@@ -1015,39 +1404,12 @@
         "septopics": false,
         "property": "payload.rawData.temperatura",
         "topi": "payload.rawData.temperatura",
-        "x": 130,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "eac6eeb13fe60de7",
-        "type": "switch",
-        "z": "8af27b7d138b7544",
-        "name": "",
-        "property": "payload.status",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "403",
-                "vt": "str"
-            },
-            {
-                "t": "neq",
-                "v": "403",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1090,
+        "x": 170,
         "y": 80,
         "wires": [
-            [],
-            []
+            [
+                "8b6f9eca269692b4"
+            ]
         ]
     },
     {
@@ -1069,7 +1431,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
+        "x": 640,
         "y": 80,
         "wires": [
             [
@@ -1078,19 +1440,1334 @@
         ]
     },
     {
-        "id": "a4bf9ccb98a8748d",
-        "type": "catch",
+        "id": "940a2d5263d02ec2",
+        "type": "change",
         "z": "8af27b7d138b7544",
         "name": "",
-        "scope": [
-            "c262730f8caecead"
+        "rules": [
+            {
+                "t": "set",
+                "p": "auxiliar",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
         ],
-        "uncaught": false,
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 965,
+        "y": 80,
+        "wires": [
+            [
+                "85857c529a8ec347"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7b2133f7bb3d836e",
+        "type": "change",
+        "z": "8af27b7d138b7544",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "auxiliar",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "auxiliar",
+                "pt": "global",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1215,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "56e49fea742b7431",
+        "type": "file in",
+        "z": "d2680f12a3dc24de",
+        "g": "45f717a1a599c4fe",
+        "name": "Leemos los datos del archivo",
+        "filename": "/data/config-Token.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 740,
+        "y": 360,
+        "wires": [
+            [
+                "5cd6d945892fcb4d"
+            ]
+        ]
+    },
+    {
+        "id": "e36bbb75880fe9ab",
+        "type": "file",
+        "z": "d2680f12a3dc24de",
+        "g": "eb50bfca794ce08c",
+        "name": "Guardamos token en archivo",
+        "filename": "/data/config-Token.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
         "x": 1100,
-        "y": 20,
+        "y": 220,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "2f5c95ae917215c4",
+        "type": "http request",
+        "z": "d2680f12a3dc24de",
+        "g": "eb50bfca794ce08c",
+        "name": "Solicitud HTML- Pedir Token",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 840,
+        "y": 220,
+        "wires": [
+            [
+                "e36bbb75880fe9ab"
+            ]
+        ]
+    },
+    {
+        "id": "7b599b5c5f376d39",
+        "type": "watch",
+        "z": "d2680f12a3dc24de",
+        "g": "45f717a1a599c4fe",
+        "name": "Verificamos si el archivo fue modificado",
+        "files": "/data/config-Token.json",
+        "recursive": "",
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "099e4f4b576a71f4"
+            ]
+        ]
+    },
+    {
+        "id": "c1d8280908390c1d",
+        "type": "catch",
+        "z": "d2680f12a3dc24de",
+        "g": "eb50bfca794ce08c",
+        "name": "",
+        "scope": [
+            "56e49fea742b7431"
+        ],
+        "uncaught": false,
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "9b121580a85bda87"
+            ]
+        ]
+    },
+    {
+        "id": "099e4f4b576a71f4",
+        "type": "delay",
+        "z": "d2680f12a3dc24de",
+        "g": "45f717a1a599c4fe",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [
+                "56e49fea742b7431"
+            ]
+        ]
+    },
+    {
+        "id": "5cd6d945892fcb4d",
+        "type": "change",
+        "z": "d2680f12a3dc24de",
+        "g": "45f717a1a599c4fe",
+        "name": "Almacenamos los datos en variable global",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "token",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c7415a5f1871fc92",
+        "type": "function",
+        "z": "d2680f12a3dc24de",
+        "g": "eb50bfca794ce08c",
+        "name": "Creamos url",
+        "func": "let url = `${msg.url_base}auth/login-json?username=${msg.user}&password=${msg.pass}`\nmsg.url = url;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "2f5c95ae917215c4"
+            ]
+        ]
+    },
+    {
+        "id": "9b121580a85bda87",
+        "type": "change",
+        "z": "d2680f12a3dc24de",
+        "g": "eb50bfca794ce08c",
+        "name": "Copiamos las variables globales a local",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url_base",
+                "pt": "msg",
+                "to": "Url_base",
+                "tot": "env"
+            },
+            {
+                "t": "set",
+                "p": "user",
+                "pt": "msg",
+                "to": "Username",
+                "tot": "env"
+            },
+            {
+                "t": "set",
+                "p": "pass",
+                "pt": "msg",
+                "to": "Password",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "c7415a5f1871fc92"
+            ]
+        ]
+    },
+    {
+        "id": "1c6ffb25817feba9",
+        "type": "change",
+        "z": "fc5941cb0302ac97",
+        "name": "PrepareRequest",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url_base",
+                "pt": "msg",
+                "to": "Url_base",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 620,
+        "wires": [
+            [
+                "5dd9df68cb6295e9"
+            ]
+        ]
+    },
+    {
+        "id": "cb0fafbd5f4431f8",
+        "type": "function",
+        "z": "fc5941cb0302ac97",
+        "name": "Ultima lectura - Url TK01",
+        "func": "let token = JSON.parse(global.get(\"token\"))\nlet url = `${msg.url_base}historico/last/TK01?token=${token.authtoken}`;\nmsg.url = url\n//node.warn(msg.url);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 340,
+        "wires": [
+            [
+                "ab2a0a5397b9a518"
+            ]
+        ]
+    },
+    {
+        "id": "ab2a0a5397b9a518",
+        "type": "http request",
+        "z": "fc5941cb0302ac97",
+        "name": "Ultima lectura",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 580,
+        "y": 340,
+        "wires": [
+            [
+                "ab4e3bdfc1620909"
+            ]
+        ]
+    },
+    {
+        "id": "2b6e8eccf77e9baa",
+        "type": "function",
+        "z": "fc5941cb0302ac97",
+        "name": "Obtener Historico",
+        "func": "let token = JSON.parse(global.get(\"token\"));\nvar numPag = global.get('numPag');\nvar tamPag = global.get('tamPag');\nvar categoria = global.get('categoria');\nvar subcategoria = global.get('subcategoria');\n\nif(tamPag == undefined){\n    tamPag = global.set('tamPag',10)\n}\nif(numPag == undefined){\n    tamPag = global.set('numPag',0)\n}\nif (subcategoria == undefined){\n    var url = `${msg.url_base}historico/order-by-category/${categoria}/desc/${tamPag}/${numPag}?token=${token.authtoken}`;\n}\nelse{\n    var url = `${msg.url_base}historico/order-by-subcategory/${categoria}/${subcategoria}/desc/${tamPag}/${numPag}?token=${token.authtoken}`;\n}\n\n    \nmsg.url = url\n//node.warn(msg.url);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "35a1d72d95ce512a"
+            ]
+        ]
+    },
+    {
+        "id": "35a1d72d95ce512a",
+        "type": "http request",
+        "z": "fc5941cb0302ac97",
+        "name": "Obtener pagina",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 520,
+        "y": 420,
+        "wires": [
+            [
+                "394d11774f053920"
+            ]
+        ]
+    },
+    {
+        "id": "394d11774f053920",
+        "type": "function",
+        "z": "fc5941cb0302ac97",
+        "name": "",
+        "func": "var aux = {\n    'FechaRecepcion':'',\n    'Temperatura':'',\n    'Humedad':'',\n    'Presion':'',\n    'Categoria':'',\n    'SubCategoria':'',\n    'Identificador':'',\n    'Ciudad':'',\n    'Region':'',\n    'Pais':'',\n    'Coordenadas':'',\n    'CodigoPostal':'',\n    'ZonaHoraria':''\n}\n\nvar auxi = new Array(msg.payload.length);\n\nif (msg.payload.fechaHoraRecepcion != undefined){\n    aux.FechaRecepcion = msg.payload.fechaHoraRecepcion;\n    aux.Temperatura = msg.payload.rawData.temperatura;\n    aux.Humedad = msg.payload.rawData.humedad;\n    aux.Presion = msg.payload.rawData.presion;\n    aux.Categoria = msg.payload.categoria;\n    aux.SubCategoria = msg.payload.subCategoria;\n    aux.Identificador = msg.payload.identificador;\n    aux.Ciudad = msg.payload.ubicacion.ciudad;\n    aux.Region = msg.payload.ubicacion.region;\n    aux.Pais = msg.payload.ubicacion.pais;\n    aux.Coordenadas = msg.payload.ubicacion.coordenadas;\n    aux.CodigoPostal = msg.payload.ubicacion.codigoPostal;\n    aux.ZonaHoraria = msg.payload.ubicacion.zonaHoraria;\n\n    msg.payload = aux;\n    return msg;\n}\n\n\nfor(let i = 0;i < msg.payload.length;i++) {\n    aux.FechaRecepcion = msg.payload[i].fechaHoraRecepcion;\n    aux.Temperatura = msg.payload[i].rawData.temperatura;\n    aux.Humedad = msg.payload[i].rawData.humedad;\n    aux.Presion = msg.payload[i].rawData.presion;\n    aux.Categoria = msg.payload[i].categoria;\n    aux.SubCategoria = msg.payload[i].subCategoria;\n    aux.Identificador = msg.payload[i].identificador;\n    aux.Ciudad = msg.payload[i].ubicacion.ciudad;\n    aux.Region = msg.payload[i].ubicacion.region;\n    aux.Pais = msg.payload[i].ubicacion.pais;\n    aux.Coordenadas = msg.payload[i].ubicacion.coordenadas;\n    aux.CodigoPostal = msg.payload[i].ubicacion.codigoPostal;\n    aux.ZonaHoraria = msg.payload[i].ubicacion.zonaHoraria;\n    auxi[i] = JSON.parse(JSON.stringify(aux));\n}\n\nmsg.payload = auxi;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 655,
+        "y": 420,
+        "wires": [
+            [
+                "33c4d5658363228b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "33c4d5658363228b",
+        "type": "switch",
+        "z": "fc5941cb0302ac97",
+        "name": "SI esta autorizado...",
+        "property": "payload.status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "403",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "403",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 800,
+        "y": 420,
+        "wires": [
+            [],
+            [
+                "de42ce8b33a99a0d"
+            ]
+        ]
+    },
+    {
+        "id": "ebe81e1780ef5fa2",
+        "type": "function",
+        "z": "fc5941cb0302ac97",
+        "name": "Creamos Array",
+        "func": "var aux = {\n    'FechaRecepcion': '',\n    'Temperatura': '',\n    'Humedad': '',\n    'Presion': '',\n    'Categoria': '',\n    'SubCategoria': '',\n    'Identificador': '',\n    'Ciudad': '',\n    'Region': '',\n    'Pais': '',\n    'Coordenadas': '',\n    'CodigoPostal': '',\n    'ZonaHoraria': ''\n}\n\nvar auxi = new Array(msg.payload.length);\n\nif (msg.payload.fechaHoraRecepcion != undefined) {\n\n    aux.FechaRecepcion = msg.payload.fechaHoraRecepcion;\n    aux.Temperatura = msg.payload.rawData.temperatura;\n    aux.Humedad = msg.payload.rawData.humedad;\n    aux.Presion = msg.payload.rawData.presion;\n    aux.Categoria = msg.payload.categoria;\n    aux.SubCategoria = msg.payload.subCategoria;\n    aux.Identificador = msg.payload.identificador;\n    aux.Ciudad = msg.payload.ubicacion.ciudad;\n    aux.Region = msg.payload.ubicacion.region;\n    aux.Pais = msg.payload.ubicacion.pais;\n    aux.Coordenadas = msg.payload.ubicacion.coordenadas;\n    aux.CodigoPostal = msg.payload.ubicacion.codigoPostal;\n    aux.ZonaHoraria = msg.payload.ubicacion.zonaHoraria;\n\n    msg.payload = aux;\n    return msg;\n}\n\n\nfor (let i = 0; i < msg.payload.length; i++) {\n    aux.FechaRecepcion = msg.payload[i].fechaHoraRecepcion;\n    aux.Temperatura = msg.payload[i].rawData.temperatura;\n    aux.Humedad = msg.payload[i].rawData.humedad;\n    aux.Presion = msg.payload[i].rawData.presion;\n    aux.Categoria = msg.payload[i].categoria;\n    aux.SubCategoria = msg.payload[i].subCategoria;\n    aux.Identificador = msg.payload[i].identificador;\n    aux.Ciudad = msg.payload[i].ubicacion.ciudad;\n    aux.Region = msg.payload[i].ubicacion.region;\n    aux.Pais = msg.payload[i].ubicacion.pais;\n    aux.Coordenadas = msg.payload[i].ubicacion.coordenadas;\n    aux.CodigoPostal = msg.payload[i].ubicacion.codigoPostal;\n    aux.ZonaHoraria = msg.payload[i].ubicacion.zonaHoraria;\n    auxi[i] = JSON.parse(JSON.stringify(aux));\n}\n\nmsg.payload = auxi;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 680,
+        "wires": [
+            [
+                "15bb3cc25dd4f5d7"
+            ]
+        ]
+    },
+    {
+        "id": "15bb3cc25dd4f5d7",
+        "type": "function",
+        "z": "fc5941cb0302ac97",
+        "name": "Creamos Tabla",
+        "func": "// Recibe el payload de un sensor, API o fuente de datos\nvar newData = msg.payload; \n\n// Recupera datos previos de la tabla\nvar tableData = flow.get(\"tableData\") || [];\n\n// Agrega la nueva entrada al inicio del array\ntableData.unshift(newData);\n\n// Mantiene solo las últimas 20 entradas (para evitar que la tabla crezca indefinidamente)\ntableData = tableData.slice(0, 20);\n\n// Guarda los datos en memoria para la próxima actualización\nflow.set(\"tableData\", tableData);\n\n// Envía la información actualizada al nodo ui_table\nmsg.payload = tableData;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 680,
+        "wires": [
+            [
+                "1644ab33d51b8cfb"
+            ]
+        ]
+    },
+    {
+        "id": "1644ab33d51b8cfb",
+        "type": "ui_table",
+        "z": "fc5941cb0302ac97",
+        "group": "0116b437be5f9659",
+        "name": "Tempo Real",
+        "order": 1,
+        "width": 30,
+        "height": 10,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 850,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "de42ce8b33a99a0d",
+        "type": "ui_table",
+        "z": "fc5941cb0302ac97",
+        "group": "79ad6e65f3bd4a4a",
+        "name": "Historico",
+        "order": 2,
+        "width": 27,
+        "height": 10,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 1100,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "86cf237766346984",
+        "type": "ui_dropdown",
+        "z": "fc5941cb0302ac97",
+        "name": "Dropdown Categoria",
+        "label": "",
+        "tooltip": "",
+        "place": "Selecciona Categoria",
+        "group": "73c51f16fe41c669",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Casa",
+                "value": "casa",
+                "type": "str"
+            },
+            {
+                "label": "Oficina",
+                "value": "oficina",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "926dd747acf2ca14"
+            ]
+        ]
+    },
+    {
+        "id": "033301bb30134162",
+        "type": "ui_dropdown",
+        "z": "fc5941cb0302ac97",
+        "name": "Dropdown Subcategoria",
+        "label": "",
+        "tooltip": "",
+        "place": "Selecciona Categoria",
+        "group": "e3a0966134bb0dd3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Categorias",
+                "value": "",
+                "type": "str"
+            },
+            {
+                "label": "Habitacion",
+                "value": "habitacion",
+                "type": "str"
+            },
+            {
+                "label": "Sala",
+                "value": "sala",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "3ac2f0a791a7d85b"
+            ]
+        ]
+    },
+    {
+        "id": "926dd747acf2ca14",
+        "type": "change",
+        "z": "fc5941cb0302ac97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "categoria",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3ac2f0a791a7d85b",
+        "type": "change",
+        "z": "fc5941cb0302ac97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "subcategoria",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab4e3bdfc1620909",
+        "type": "switch",
+        "z": "fc5941cb0302ac97",
+        "name": "Si esta autorizado...",
+        "property": "payload.status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "403",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "403",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 780,
+        "y": 340,
+        "wires": [
+            [
+                "bdc9054dafb00176"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3433d56d483e640b",
+        "type": "switch",
+        "z": "fc5941cb0302ac97",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 230,
+        "y": 680,
+        "wires": [
+            [
+                "ebe81e1780ef5fa2"
+            ]
+        ]
+    },
+    {
+        "id": "bdc9054dafb00176",
+        "type": "function",
+        "z": "fc5941cb0302ac97",
+        "name": "",
+        "func": "var presion = {};\npresion.topic = 'Presion hPa';\nvar humedad = {};\nhumedad.topic = 'Humedad %';\nvar temperatura = {};\ntemperatura.topic = 'Temperatura °C';\nvar altitud = {};\naltitud.topic = 'Altitud Mts';\nvar puntoDeRocio = {};\npuntoDeRocio.topic = 'Punto De Rocio °C';\n\npresion.payload = msg.payload.rawData.presion;\nhumedad.payload = msg.payload.rawData.humedad;\ntemperatura.payload = msg.payload.rawData.temperatura;\naltitud.payload = msg.payload.altitud\npuntoDeRocio.payload = msg.payload.puntoRocio\n\nreturn [presion, humedad, temperatura, altitud, puntoDeRocio];",
+        "outputs": 5,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 955,
+        "y": 320,
+        "wires": [
+            [
+                "c089b1bcd5071223"
+            ],
+            [
+                "c089b1bcd5071223"
+            ],
+            [
+                "c089b1bcd5071223",
+                "482dfa0cc7ee1c16"
+            ],
+            [
+                "c089b1bcd5071223"
+            ],
+            [
+                "c089b1bcd5071223"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "c089b1bcd5071223",
+        "type": "ui_chart",
+        "z": "fc5941cb0302ac97",
+        "name": "Grafico de barras en tiempo real",
+        "group": "b69eaee3dd875d9e",
+        "order": 1,
+        "width": 6,
+        "height": 5,
+        "label": "",
+        "chartType": "horizontalBar",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1150,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3edb22a72786aca5",
+        "type": "function",
+        "z": "fc5941cb0302ac97",
+        "name": "Ultima lectura - Url TK02",
+        "func": "let token = JSON.parse(global.get(\"token\"))\nlet url = `${msg.url_base}historico/last/TK02?token=${token.authtoken}`;\nmsg.url = url\n//node.warn(msg.url);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "8e323ac1d94cf48e"
+            ]
+        ]
+    },
+    {
+        "id": "8e323ac1d94cf48e",
+        "type": "http request",
+        "z": "fc5941cb0302ac97",
+        "name": "Ultima lectura",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 580,
+        "y": 260,
+        "wires": [
+            [
+                "5fbcb7d8d252d0b4"
+            ]
+        ]
+    },
+    {
+        "id": "5fbcb7d8d252d0b4",
+        "type": "switch",
+        "z": "fc5941cb0302ac97",
+        "name": "Si esta autorizado...",
+        "property": "payload.status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "403",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "403",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 780,
+        "y": 260,
+        "wires": [
+            [
+                "a2bcdc048c372962"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a2bcdc048c372962",
+        "type": "function",
+        "z": "fc5941cb0302ac97",
+        "name": "",
+        "func": "var presion = {};\npresion.topic = 'Presion hPa';\nvar humedad = {};\nhumedad.topic = 'Humedad %';\nvar temperatura = {};\ntemperatura.topic = 'Temperatura °C';\nvar altitud = {};\naltitud.topic = 'Altitud Mts';\nvar puntoDeRocio = {};\npuntoDeRocio.topic = 'Punto De Rocio °C';\n\npresion.payload = msg.payload.rawData.presion;\nhumedad.payload = msg.payload.rawData.humedad;\ntemperatura.payload = msg.payload.rawData.temperatura;\naltitud.payload = msg.payload.altitud\npuntoDeRocio.payload = msg.payload.puntoRocio\n\nreturn [presion, humedad, temperatura, altitud, puntoDeRocio];",
+        "outputs": 5,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 955,
+        "y": 240,
+        "wires": [
+            [
+                "b064f4d8120a83cc"
+            ],
+            [
+                "b064f4d8120a83cc"
+            ],
+            [
+                "b064f4d8120a83cc",
+                "c84bb4df8ed96d22"
+            ],
+            [
+                "b064f4d8120a83cc"
+            ],
+            [
+                "b064f4d8120a83cc"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "b064f4d8120a83cc",
+        "type": "ui_chart",
+        "z": "fc5941cb0302ac97",
+        "name": "Grafico de barras en tiempo real",
+        "group": "f94a39eab9b64e5f",
+        "order": 1,
+        "width": 6,
+        "height": 5,
+        "label": "",
+        "chartType": "horizontalBar",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1150,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5dd9df68cb6295e9",
+        "type": "link out",
+        "z": "fc5941cb0302ac97",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "9ce819dc6439eadd"
+        ],
+        "x": 385,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9ce819dc6439eadd",
+        "type": "link in",
+        "z": "fc5941cb0302ac97",
+        "name": "link in 2",
+        "links": [
+            "5dd9df68cb6295e9"
+        ],
+        "x": 65,
+        "y": 380,
+        "wires": [
+            [
+                "3edb22a72786aca5",
+                "cb0fafbd5f4431f8",
+                "2b6e8eccf77e9baa"
+            ]
+        ]
+    },
+    {
+        "id": "482dfa0cc7ee1c16",
+        "type": "ui_gauge",
+        "z": "fc5941cb0302ac97",
+        "name": "",
+        "group": "2f3b80a5149baf5c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura TK01",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "20",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 1150,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c84bb4df8ed96d22",
+        "type": "ui_gauge",
+        "z": "fc5941cb0302ac97",
+        "name": "",
+        "group": "b0422ad59ff63227",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura TK02",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "20",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 1150,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e31686d7c051ac20",
+        "type": "ui_template",
+        "z": "fc5941cb0302ac97",
+        "group": "79ad6e65f3bd4a4a",
+        "name": "",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"text-align:center;\">\n    <button ng-click=\"send({payload: 'prev'})\">Anterior</button>\n    <button ng-click=\"send({payload: 'next'})\">Siguiente</button>\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 360,
+        "y": 480,
+        "wires": [
+            [
+                "f07536eb8d7aaca1"
+            ]
+        ]
+    },
+    {
+        "id": "f07536eb8d7aaca1",
+        "type": "function",
+        "z": "fc5941cb0302ac97",
+        "name": "Botones de Tabla",
+        "func": "let numPag = global.get('numPag') || 0; // Si no está definido, se inicializa en 0.\n\nif (msg.payload === 'prev') {\n    numPag = Math.max(0, numPag - 1); // No permitir valores negativos, el mínimo es 0.\n} else if (msg.payload === 'next') {\n    numPag = numPag + 1; // Aumentar la página.\n}\nmsg.payload = numPag;\nglobal.set('numPag', numPag);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 480,
+        "wires": [
+            [
+                "07ced88cdae13473"
+            ]
+        ]
+    },
+    {
+        "id": "07ced88cdae13473",
+        "type": "ui_text",
+        "z": "fc5941cb0302ac97",
+        "group": "79ad6e65f3bd4a4a",
+        "order": 1,
+        "width": "5",
+        "height": 1,
+        "name": "",
+        "label": "Pagina: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 720,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "6d30304d0c646161",
+        "type": "change",
+        "z": "fc5941cb0302ac97",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tamPag",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "598be6b107232ce4",
+        "type": "ui_text_input",
+        "z": "fc5941cb0302ac97",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "66eb1b3dd423484e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "6d30304d0c646161"
+            ]
+        ]
+    },
+    {
+        "id": "54e17d47a91abee4",
+        "type": "function",
+        "z": "ac29ba59b64e1371",
+        "name": "Creamos url",
+        "func": "//obtnenemos el valor de la variable token\nlet token = JSON.parse(global.get(\"token\"))\n//construimos la url para guardar el historico \nlet url = `${msg.url_base}historico/1?token=${token.authtoken}`;\n//almacenamos la url y permitimos que en caso de error se muestre en los logs\nmsg.url = url\n//node.warn(msg.url);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 120,
+        "wires": [
+            [
+                "b9c4e3168e197331"
+            ]
+        ]
+    },
+    {
+        "id": "b9c4e3168e197331",
+        "type": "http request",
+        "z": "ac29ba59b64e1371",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": true,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 630,
+        "y": 120,
+        "wires": [
+            [
+                "be0271f051888398"
+            ]
+        ]
+    },
+    {
+        "id": "5d0189ab4573c7ec",
+        "type": "change",
+        "z": "ac29ba59b64e1371",
+        "name": "Obtenemos url base",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url_base",
+                "pt": "msg",
+                "to": "Url_base",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 120,
+        "wires": [
+            [
+                "54e17d47a91abee4"
+            ]
+        ]
+    },
+    {
+        "id": "bfe3e82e03e159fa",
+        "type": "catch",
+        "z": "ac29ba59b64e1371",
+        "name": "",
+        "scope": [
+            "54e17d47a91abee4"
+        ],
+        "uncaught": false,
+        "x": 780,
+        "y": 40,
+        "wires": [
+            [
+                "f0b401b523709f87"
+            ]
+        ]
+    },
+    {
+        "id": "be0271f051888398",
+        "type": "switch",
+        "z": "ac29ba59b64e1371",
+        "name": "",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num"
+            },
+            {
+                "t": "neq",
+                "v": "200",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 810,
+        "y": 120,
+        "wires": [
+            [
+                "43fd8632481961b9"
+            ],
+            [
+                "239df298e91136c4"
+            ]
+        ]
+    },
+    {
+        "id": "f0b401b523709f87",
+        "type": "change",
+        "z": "ac29ba59b64e1371",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "403",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 925,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "43fd8632481961b9",
+        "type": "change",
+        "z": "ac29ba59b64e1371",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "statusCode",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 985,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "239df298e91136c4",
+        "type": "change",
+        "z": "ac29ba59b64e1371",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "500",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 985,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "l": false
     },
     {
         "id": "fe7b34da155a7705",
@@ -2492,7 +4169,7 @@
         "z": "55ef0ffabe8c9e27",
         "name": "",
         "label": "",
-        "group": "e4e08d1207cc8837",
+        "group": "",
         "order": 0,
         "width": 0,
         "height": 0,
@@ -2759,7 +4436,7 @@
         "type": "ui_button",
         "z": "55ef0ffabe8c9e27",
         "name": "",
-        "group": "4c1092646a80ea54",
+        "group": "",
         "order": 0,
         "width": "3",
         "height": "1",
@@ -2822,7 +4499,7 @@
         "type": "ui_chart",
         "z": "55ef0ffabe8c9e27",
         "name": "",
-        "group": "641878b21657532b",
+        "group": "",
         "order": 0,
         "width": "8",
         "height": "8",
@@ -2957,7 +4634,7 @@
         "type": "ui_button",
         "z": "55ef0ffabe8c9e27",
         "name": "",
-        "group": "4c1092646a80ea54",
+        "group": "",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -3061,7 +4738,7 @@
         "id": "a95a1d26857842b5",
         "type": "ui_template",
         "z": "55ef0ffabe8c9e27",
-        "group": "179bcc3c5142f858",
+        "group": "",
         "name": "Tabla",
         "order": 0,
         "width": "8",
@@ -3083,7 +4760,7 @@
         "type": "ui_button",
         "z": "55ef0ffabe8c9e27",
         "name": "",
-        "group": "4c1092646a80ea54",
+        "group": "",
         "order": 0,
         "width": "3",
         "height": "1",
@@ -3245,7 +4922,7 @@
         "id": "c975d23a4fd945ef",
         "type": "ui_template",
         "z": "55ef0ffabe8c9e27",
-        "group": "4c1092646a80ea54",
+        "group": "",
         "name": "",
         "order": 3,
         "width": 0,
@@ -3447,11 +5124,12 @@
         "wires": []
     },
     {
-        "id": "18098d1522d16263",
+        "id": "a0362523ba8a161d",
         "type": "mqtt in",
-        "z": "ee68f309ebd76fe2",
+        "z": "07ac3d9de4fc1555",
+        "g": "5966bc425910be97",
         "name": "",
-        "topic": "casa/habitacion/tempHum",
+        "topic": "casa/habitacion/tk01",
         "qos": "2",
         "datatype": "json",
         "broker": "02d9f0336a5415d6",
@@ -3459,19 +5137,19 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 270,
-        "y": 180,
+        "x": 290,
+        "y": 440,
         "wires": [
             [
-                "468d6f0d16320d7d",
-                "c69443334a6d8707"
+                "68e2c420a7f6d38d"
             ]
         ]
     },
     {
-        "id": "468d6f0d16320d7d",
+        "id": "68e2c420a7f6d38d",
         "type": "subflow:8af27b7d138b7544",
-        "z": "ee68f309ebd76fe2",
+        "z": "07ac3d9de4fc1555",
+        "g": "5966bc425910be97",
         "name": "",
         "env": [
             {
@@ -3481,137 +5159,20 @@
             }
         ],
         "x": 590,
-        "y": 180,
+        "y": 460,
         "wires": [
             [
-                "fcecee2e06bac602"
-            ],
-            [
-                "cb268b9ff17efca5"
+                "995eb247f2824ad0",
+                "5e1ed7de61954833"
             ]
         ]
     },
     {
-        "id": "c69443334a6d8707",
-        "type": "debug",
-        "z": "ee68f309ebd76fe2",
-        "name": "Datos Recibidos",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "fcecee2e06bac602",
-        "type": "debug",
-        "z": "ee68f309ebd76fe2",
-        "name": "Error: 403 - No autorizado",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "Error 403 - No autorizado",
-        "targetType": "jsonata",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 890,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "cb268b9ff17efca5",
-        "type": "debug",
-        "z": "ee68f309ebd76fe2",
-        "name": "Datos Almacenados en BD",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 900,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "7de4b7a2e4130353",
-        "type": "mqtt in",
-        "z": "698bdcf08b44c5be",
-        "name": "",
-        "topic": "casa/habitacion/tempHum",
-        "qos": "2",
-        "datatype": "json",
-        "broker": "02d9f0336a5415d6",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 150,
-        "y": 80,
-        "wires": [
-            [
-                "cbc83ec7c5495892",
-                "146c73fe49f8276a",
-                "11b1fc5e52db6280"
-            ]
-        ]
-    },
-    {
-        "id": "cbc83ec7c5495892",
-        "type": "subflow:8af27b7d138b7544",
-        "z": "698bdcf08b44c5be",
-        "name": "",
-        "env": [
-            {
-                "name": "Url_base",
-                "value": "http://tomcata:8080/",
-                "type": "str"
-            }
-        ],
-        "x": 450,
-        "y": 80,
-        "wires": [
-            [
-                "80f44d5bfc1e3fa9"
-            ],
-            [
-                "80f44d5bfc1e3fa9",
-                "9e46545120461a8f"
-            ]
-        ]
-    },
-    {
-        "id": "146c73fe49f8276a",
-        "type": "debug",
-        "z": "698bdcf08b44c5be",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "80f44d5bfc1e3fa9",
+        "id": "3d63c32992f955bf",
         "type": "mqtt out",
-        "z": "698bdcf08b44c5be",
+        "z": "07ac3d9de4fc1555",
         "name": "",
-        "topic": "casa/habitacion/autenticacion",
+        "topic": "casa/habitacion/auth",
         "qos": "2",
         "retain": "true",
         "respTopic": "",
@@ -3619,71 +5180,77 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "02d9f0336a5415d6",
-        "x": 870,
+        "broker": "945bc84ee7d3cf52",
+        "x": 1000,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "995eb247f2824ad0",
+        "type": "debug",
+        "z": "07ac3d9de4fc1555",
+        "g": "5966bc425910be97",
+        "name": "Datos Guardados",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "f99d53eac17cad47",
+        "type": "subflow:d2680f12a3dc24de",
+        "z": "07ac3d9de4fc1555",
+        "name": "",
+        "env": [
+            {
+                "name": "Url_base",
+                "value": "http://soa24.mooo.com:8080/",
+                "type": "str"
+            }
+        ],
+        "x": 980,
         "y": 60,
         "wires": []
     },
     {
-        "id": "11b1fc5e52db6280",
-        "type": "template",
-        "z": "698bdcf08b44c5be",
+        "id": "5fe3c53065f5712c",
+        "type": "mqtt in",
+        "z": "07ac3d9de4fc1555",
+        "g": "5966bc425910be97",
         "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "[{\n    \"Temperatura\":\"{{payload.rawData.temperatura}}\",\n    \"Humedad\":\"{{payload.rawData.humedad}}\",\n    \"Presion\":\"{{payload.rawData.presion}}\",\n    \"Altitud\":\"{{payload.altitud}}\",\n    \"Punto_de_Rocio\":\"{{payload.puntoRocio}}\"\n}]",
-        "output": "json",
-        "x": 140,
-        "y": 360,
+        "topic": "casa/habitacion/tk02",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "02d9f0336a5415d6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 500,
         "wires": [
             [
-                "03f8a2d0f2f90eb7"
+                "68e2c420a7f6d38d"
             ]
         ]
     },
     {
-        "id": "03f8a2d0f2f90eb7",
-        "type": "function",
-        "z": "698bdcf08b44c5be",
-        "name": "",
-        "func": "var presion = {};\npresion.topic = 'Presion hPa';\nvar humedad = {};\nhumedad.topic = 'Humedad %';\nvar temperatura = {};\ntemperatura.topic = 'Temperatura °C';\nvar altitud = {};\naltitud.topic = 'Altitud Mts';\nvar puntoDeRocio = {};\npuntoDeRocio.topic = 'Punto De Rocio °C';\n\npresion.payload = msg.payload[0].Presion\nhumedad.payload = msg.payload[0].Humedad\ntemperatura.payload = msg.payload[0].Temperatura\naltitud.payload = msg.payload[0].Altitud\npuntoDeRocio.payload = msg.payload[0].Punto_de_Rocio\n\nreturn [presion, humedad, temperatura , altitud, puntoDeRocio];",
-        "outputs": 5,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 300,
-        "wires": [
-            [
-                "f65369cb5405591b"
-            ],
-            [
-                "f65369cb5405591b"
-            ],
-            [
-                "f65369cb5405591b"
-            ],
-            [],
-            [
-                "f65369cb5405591b"
-            ]
-        ]
-    },
-    {
-        "id": "379efbdee2187811",
+        "id": "5b2b1a7a78421fa3",
         "type": "inject",
-        "z": "698bdcf08b44c5be",
+        "z": "07ac3d9de4fc1555",
         "name": "",
         "props": [
             {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
+                "p": "p",
+                "v": "",
+                "vt": "date"
             }
         ],
         "repeat": "1",
@@ -3691,35 +5258,63 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 170,
-        "y": 440,
+        "x": 200,
+        "y": 100,
         "wires": [
-            []
+            [
+                "9903d2fd4561371e",
+                "5e1ed7de61954833"
+            ]
         ]
     },
     {
-        "id": "9e46545120461a8f",
-        "type": "debug",
-        "z": "698bdcf08b44c5be",
+        "id": "9903d2fd4561371e",
+        "type": "subflow:ac29ba59b64e1371",
+        "z": "07ac3d9de4fc1555",
         "name": "",
-        "active": false,
+        "env": [
+            {
+                "name": "Url_base",
+                "value": "http://soa24.mooo.com:8080/",
+                "type": "str"
+            }
+        ],
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "c7293855cac432d2"
+            ],
+            [
+                "cd8e6cab4c19ad5a"
+            ],
+            [
+                "d2d9d80db7bf3510"
+            ]
+        ]
+    },
+    {
+        "id": "1b4279aecf864364",
+        "type": "debug",
+        "z": "07ac3d9de4fc1555",
+        "name": "Error -403- No Autorizado",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 810,
-        "y": 120,
+        "x": 990,
+        "y": 20,
         "wires": []
     },
     {
-        "id": "f65369cb5405591b",
+        "id": "5a5d65a9fe799478",
         "type": "debug",
-        "z": "698bdcf08b44c5be",
-        "name": "",
+        "z": "07ac3d9de4fc1555",
+        "name": "Conectado",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -3728,8 +5323,135 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 650,
-        "y": 320,
+        "x": 970,
+        "y": 160,
         "wires": []
+    },
+    {
+        "id": "fd2b4cb7788ff927",
+        "type": "debug",
+        "z": "07ac3d9de4fc1555",
+        "name": "Error - 500",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c7293855cac432d2",
+        "type": "link out",
+        "z": "07ac3d9de4fc1555",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "27df998dabca4d8e"
+        ],
+        "x": 545,
+        "y": 60,
+        "wires": [],
+        "icon": "font-awesome/fa-lock"
+    },
+    {
+        "id": "cd8e6cab4c19ad5a",
+        "type": "link out",
+        "z": "07ac3d9de4fc1555",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "219b122380b029d0"
+        ],
+        "x": 555,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "d2d9d80db7bf3510",
+        "type": "link out",
+        "z": "07ac3d9de4fc1555",
+        "name": "link out 4",
+        "mode": "link",
+        "links": [
+            "1ec0f616effce236"
+        ],
+        "x": 545,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "27df998dabca4d8e",
+        "type": "link in",
+        "z": "07ac3d9de4fc1555",
+        "name": "link in 3",
+        "links": [
+            "c7293855cac432d2"
+        ],
+        "x": 825,
+        "y": 40,
+        "wires": [
+            [
+                "1b4279aecf864364",
+                "f99d53eac17cad47",
+                "3d63c32992f955bf"
+            ]
+        ]
+    },
+    {
+        "id": "219b122380b029d0",
+        "type": "link in",
+        "z": "07ac3d9de4fc1555",
+        "name": "link in 4",
+        "links": [
+            "cd8e6cab4c19ad5a"
+        ],
+        "x": 825,
+        "y": 140,
+        "wires": [
+            [
+                "3d63c32992f955bf",
+                "5a5d65a9fe799478"
+            ]
+        ]
+    },
+    {
+        "id": "1ec0f616effce236",
+        "type": "link in",
+        "z": "07ac3d9de4fc1555",
+        "name": "link in 5",
+        "links": [
+            "d2d9d80db7bf3510"
+        ],
+        "x": 835,
+        "y": 240,
+        "wires": [
+            [
+                "3d63c32992f955bf",
+                "fd2b4cb7788ff927"
+            ]
+        ]
+    },
+    {
+        "id": "5e1ed7de61954833",
+        "type": "subflow:fc5941cb0302ac97",
+        "z": "07ac3d9de4fc1555",
+        "name": "Dashboards",
+        "env": [
+            {
+                "name": "Url_base",
+                "value": "http://soa24.mooo.com:8080/",
+                "type": "str"
+            }
+        ],
+        "x": 790,
+        "y": 340,
+        "wires": [
+            []
+        ]
     }
 ]
